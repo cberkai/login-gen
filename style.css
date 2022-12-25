@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("./images/stacked-steps-haikei\ \(1\).svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  width: 450px;
+  background: rgb(43, 43, 46);
+  background: linear-gradient(
+    0deg,
+    rgba(43, 43, 46, 1) 0%,
+    rgba(57, 57, 58, 1) 19%,
+    rgba(66, 66, 66, 1) 33%,
+    rgba(105, 105, 105, 1) 49%,
+    rgba(130, 131, 131, 1) 63%,
+    rgba(178, 178, 179, 1) 83%,
+    rgba(193, 193, 193, 1) 100%,
+    rgba(205, 205, 205, 0.9360119047619048) 100%
+  );
+  border-radius: 8px;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
+.container h2 {
+  font-weight: 600;
+  font-size: 1.31rem;
+  text-align: center;
+  padding: 1rem 1.175rem;
+  border-bottom: 1px solid #000000;
+}
+.wrapper {
+  margin: 1.25rem 1.75rem;
+}
+.wrapper .input-box {
+  position: relative;
+}
+.input-box input {
+  width: 100%;
+  height: 53px;
+  color: #000;
+  background: none;
+  font-size: 1.06rem;
+  letter-spacing: 1.14px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid rgb(22, 22, 22);
+  padding: 0rem 2.85rem 0rem 1rem;
+}
+.input-box span {
+  position: absolute;
+  right: 13px;
+  cursor: pointer;
+  line-height: 53px;
+  color: #707070;
+}
+.wrapper .pass-indicator {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: #dfdfdf;
+  margin-top: 0.75rem;
+  border-radius: 25px;
+}
+.pass-indicator::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+.pass-indicator#weak::before {
+  width: 20%;
+  background: #2fa45a94;
+}
+.pass-indicator#medium::before {
+  width: 50%;
+  background: #f1c80b;
+}
+.pass-indicator#strong::before {
+  width: 100%;
+  background: #ff00005e;
+}
+.wrapper .pass-length {
+  margin: 1.56rem 0 1.25rem;
+}
+.pass-length .details {
+  display: flex;
+  justify-content: space-between;
+}
+.pass-length input {
+  width: 100%;
+  height: 5px;
+}
+
+.pass-settings .options {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.pass-settings .options .option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: calc(100% / 2);
+}
+.options .option:first-child {
+  pointer-events: none;
+}
+.options .option:first-child input {
+  opacity: 0.7;
+}
+.options .option input {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.options .option label {
+  cursor: pointer;
+  padding-left: 0.63rem;
+}
+.wrapper .generate-btn {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.06rem;
+  padding: 0.94rem 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: 0.94rem 0 1.3rem;
+}
+
+.button-50 {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-50:focus {
+  text-decoration: none;
+}
+
+.button-50:hover {
+  text-decoration: none;
+}
+
+.button-50:active {
+  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-50:not([disabled]):active {
+  box-shadow: rgb(85, 78, 78) 2px 2px 0 0, rgb(69, 69, 69) 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}
